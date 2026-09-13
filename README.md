@@ -2,7 +2,7 @@
 
 ## Branding
 - Clan: n0w or neVer
-- Creator / owner: cApcom
+- Creator / owner: crAzy cAp
 - Official logo: logo.png
 - Discord: https://discord.gg/TmPJpB9x
 - Twitch: https://www.twitch.tv/capcomhq
