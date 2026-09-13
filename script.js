@@ -3,7 +3,7 @@
 ========================================================= */
 
 const TWITCH_CHANNEL =
-  "capcomhq";
+  "crazycaptv";
 
 const TWITCH_URL =
   `https://www.twitch.tv/${TWITCH_CHANNEL}`;
@@ -17,7 +17,7 @@ const TWITCH_URL =
 */
 
 const TWITCH_PARENT =
-  "capcomhq.github.io";
+  "crazycap-hq.github.io";
 
 
 /* =========================================================
@@ -110,7 +110,7 @@ streamStatus.textContent =
   "Twitch channel";
 
 statusDetail.textContent =
-  "Live when cApcom is streaming";
+  "Live when crAzy cAp is streaming";
 
 headerStatus.textContent =
   "TWITCH";
