@@ -278,6 +278,23 @@ footer a:hover {
 }
 
 
+.twitch-glyph {
+  width: 15px;
+  height: 15px;
+
+  flex-shrink: 0;
+
+  color: #9fb0c7;
+
+  transition: color 0.2s ease;
+}
+
+
+.live-indicator-link:hover .twitch-glyph {
+  color: var(--cyan);
+}
+
+
 .live-indicator i {
   width: 7px;
   height: 7px;
