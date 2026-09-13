@@ -252,6 +252,32 @@ footer a:hover {
 }
 
 
+.live-indicator-link {
+  text-decoration: none;
+
+  padding: 8px 14px;
+
+  border: 1px solid rgba(159, 176, 199, 0.25);
+  border-radius: 999px;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+
+.live-indicator-link:hover {
+  color: #fff;
+
+  border-color: var(--cyan);
+
+  background: rgba(34, 211, 238, 0.08);
+}
+
+
 .live-indicator i {
   width: 7px;
   height: 7px;
