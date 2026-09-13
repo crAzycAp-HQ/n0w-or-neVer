@@ -36,12 +36,6 @@ const statusDetail =
 const statusDot =
   document.getElementById("statusDot");
 
-const headerStatus =
-  document.getElementById("headerStatus");
-
-const headerStatusDot =
-  document.getElementById("headerStatusDot");
-
 const chatLiveDot =
   document.getElementById("chatLiveDot");
 
@@ -112,12 +106,7 @@ streamStatus.textContent =
 statusDetail.textContent =
   "Live when crAzy cAp is streaming";
 
-headerStatus.textContent =
-  "TWITCH";
-
 statusDot.classList.remove("live");
-
-headerStatusDot.classList.add("offline");
 
 chatLiveDot.classList.add("offline");
 
