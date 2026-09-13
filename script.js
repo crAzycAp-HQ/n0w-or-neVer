@@ -48,8 +48,8 @@ const chatLiveDot =
 const twitchChat =
   document.getElementById("twitchChat");
 
-const openTwitch =
-  document.getElementById("openTwitch");
+const headerTwitchButton =
+  document.getElementById("headerTwitchButton");
 
 const menuButton =
   document.getElementById("menuButton");
@@ -59,7 +59,7 @@ const menuButton =
    BASIC SETTINGS
 ========================================================= */
 
-openTwitch.href =
+headerTwitchButton.href =
   TWITCH_URL;
 
 
