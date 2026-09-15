@@ -295,4 +295,4 @@ document.querySelectorAll(".desktop-nav a").forEach((link) => {
    INITIAL LANGUAGE
 ========================================================= */
 
-setLanguage(localStorage.getItem("n0w-or-neVer-language") || "de");
+setLanguage(localStorage.getItem("n0w-or-neVer-language") || "en");
