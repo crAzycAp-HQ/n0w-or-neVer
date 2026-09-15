@@ -1691,12 +1691,17 @@ body * {
 }
 
 .language-option {
-  display: flex;
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap;
   align-items: center;
-  gap: 3px;
+  justify-content: flex-start;
+  gap: 4px;
+  white-space: nowrap;
 }
 
 .language-option .language-flag {
+  display: block;
   margin-right: 1px;
 }
 
@@ -1738,6 +1743,10 @@ body * {
   border-radius: 12px;
   box-shadow: 0 18px 45px rgba(0, 0, 0, .45);
   backdrop-filter: blur(16px);
+}
+
+.language-dropdown .language-option {
+  min-height: 32px;
 }
 
 .language-dropdown.open {
