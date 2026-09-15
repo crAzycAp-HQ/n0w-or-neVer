@@ -1662,6 +1662,10 @@ body * {
 }
 
 .language-dropdown-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
   min-width: 92px;
   border: 1px solid rgba(159, 176, 199, .25);
   border-radius: 999px;
@@ -1675,10 +1679,10 @@ body * {
 }
 
 .language-flag {
-  display: inline-block;
-  width: 16px;
-  height: 11px;
-  flex: 0 0 16px;
+  display: block;
+  width: 14px;
+  height: 9px;
+  flex: 0 0 14px;
   vertical-align: middle;
   margin-right: 4px;
   border-radius: 1px;
