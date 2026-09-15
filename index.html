@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="n0w or neVer &mdash; official clan, live stream and community by crAzy cAp." name="description"/>
+  <meta content="#020713" name="theme-color"/>
+  <title>
+   n0w or neVer | Live by crAzy cAp
+  </title>
+  <!-- CSS -->
+  <link href="style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <!-- Background -->
+  <div class="ambient ambient-a">
+  </div>
+  <div class="ambient ambient-b">
+  </div>
+  <div class="grid">
+  </div>
+  <!-- =====================================================
+       HEADER
+  ====================================================== -->
+  <header class="site-header">
+   <!-- Logo -->
+   <a aria-label="n0w or neVer home" class="brand" href="#top">
+    <img alt="n0w or neVer logo" class="brand-logo" src="logo.png"/>
+    <span class="brand-copy">
+     <strong>
+      n0w or neVer
+     </strong>
+    </span>
+   </a>
+   <!-- Navigation -->
+   <nav aria-label="Main navigation" class="desktop-nav">
+    <a data-i18n="nav_live" href="#live">
+     LIVE
+    </a>
+    <a data-i18n="nav_schedule" href="#schedule">
+     SCHEDULE
+    </a>
+    <a data-i18n="nav_about" href="#about">
+     ABOUT
+    </a>
+    <a data-i18n="nav_community" href="#community">
+     COMMUNITY
+    </a>
+   </nav>
+   <!-- Header Status -->
+   <div class="header-actions">
+    <div class="language-switcher">
+     <button aria-expanded="false" aria-haspopup="true" class="language-dropdown-button" id="languageDropdownButton" type="button">
+      English
+     </button>
+     <div class="language-dropdown" id="languageDropdown" role="menu">
+      <button class="language-option" data-lang="en" role="menuitem" type="button">
+       English
+      </button>
+      <button class="language-option" data-lang="de" role="menuitem" type="button">
+       Deutsch
+      </button>
+     </div>
+    </div>
+    <a class="live-indicator live-indicator-link" href="https://www.twitch.tv/crazycaptv" id="headerTwitchButton" rel="noopener" target="_blank">
+     <svg aria-hidden="true" class="twitch-glyph" fill="currentColor" viewbox="0 0 24 24">
+      <path d="M6 0 1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0Zm14.571 11.143-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z">
+      </path>
+      <path d="M11.571 4.714h1.715v5.143H11.57Zm4.715 0H18v5.143h-1.714Z">
+      </path>
+     </svg>
+     <span id="headerStatus">
+      crAzycApTV
+     </span>
+    </a>
+    <!-- Mobile Menu -->
+    <button aria-label="Open navigation" class="menu-button" id="menuButton" type="button">
+     ☰
+    </button>
+   </div>
+  </header>
+  <!-- =====================================================
+       MAIN
+  ====================================================== -->
+  <main id="top">
+   <!-- =================================================
+         HERO
+    ================================================== -->
+   <section class="hero section-shell">
+    <!-- Hero Text -->
+    <div class="hero-copy">
+     <div class="eyebrow" data-i18n="hero_eyebrow">
+      <span>
+      </span>
+      OFFICIAL n0w or neVer CLAN
+     </div>
+     <h1>
+      PLAY
+      <br/>
+      <em>
+       CONNECT
+      </em>
+      <br/>
+      NEVER QUIT
+     </h1>
+     <p data-i18n="hero_desc">
+      n0w or neVer is the clan and community built by
+      <strong>
+       crAzy cAp
+      </strong>
+      .
+
+          Gaming, live moments and a place for people who want
+          to be part of more than just another stream.
+     </p>
+     <!-- Hero Buttons -->
+     <div class="hero-actions">
+      <a class="button button-primary" data-i18n="hero_watch" href="#live">
+       WATCH LIVE
+       <b>
+        ▶
+       </b>
+      </a>
+      <a class="button button-ghost" data-i18n="hero_discord" href="https://discord.gg/TmPJpB9x" rel="noopener" target="_blank">
+       JOIN DISCORD &nearrow;
+      </a>
+     </div>
+    </div>
+    <!-- Hero Logo -->
+    <div aria-hidden="true" class="hero-visual">
+     <div class="logo-aura">
+     </div>
+     <img alt="" class="hero-logo" src="logo.png"/>
+    </div>
+   </section>
+   <!-- =================================================
+         LIVE STREAM
+    ================================================== -->
+   <section class="live-section section-shell" id="live">
+    <!-- Section Heading -->
+    <div class="section-heading">
+     <div>
+      <span class="eyebrow" data-i18n="live_eyebrow">
+       <span>
+       </span>
+       LIVE CHANNEL
+      </span>
+      <h2 data-i18n="live_heading">
+       WATCH THE
+       <em>
+        STREAM
+       </em>
+      </h2>
+     </div>
+     <!-- Stream Status -->
+     <div class="status-card">
+      <i id="statusDot">
+      </i>
+      <div>
+       <strong data-i18n="live_status" id="streamStatus">
+        Twitch channel
+       </strong>
+       <span data-i18n="live_detail" id="statusDetail">
+        Loading player&hellip;
+       </span>
+      </div>
+     </div>
+    </div>
+    <!-- =================================================
+           STREAM + CHAT
+      ================================================== -->
+    <div class="live-layout">
+     <!-- VIDEO -->
+     <div class="video-column">
+      <div class="player-frame" id="playerFrame">
+       <!-- Official Twitch Player -->
+       <div class="twitch-player" id="twitchPlayer">
+       </div>
+      </div>
+      <!-- Stream Footer -->
+      <div class="stream-footer">
+       <div class="stream-info">
+        <span class="tag" data-i18n="stream_tag">
+         TWITCH LIVE
+        </span>
+        <h3 data-i18n="stream_title">
+         n0w or neVer &mdash; Live Stream
+        </h3>
+        <p data-i18n="stream_desc">
+         Watch crAzy cAp live on Twitch directly from the
+                official n0w or neVer website.
+        </p>
+       </div>
+      </div>
+     </div>
+     <!-- =================================================
+             LIVE CHAT
+        ================================================== -->
+     <aside aria-label="Twitch live chat" class="chat-frame">
+      <div class="chat-header">
+       <span class="chat-live-dot" id="chatLiveDot">
+       </span>
+       <strong data-i18n="chat_title">
+        LIVE CHAT
+       </strong>
+       <span data-i18n="chat_subtitle">
+        TWITCH COMMUNITY
+       </span>
+      </div>
+      <!-- Official Twitch Chat -->
+      <iframe allow="clipboard-write" id="twitchChat" title="n0w or neVer Twitch live chat">
+      </iframe>
+     </aside>
+    </div>
+   </section>
+   <!-- =================================================
+         SCHEDULE
+    ================================================== -->
+   <section class="section-shell schedule-section" id="schedule">
+    <div class="section-heading compact">
+     <div>
+      <span class="eyebrow" data-i18n="schedule_eyebrow">
+       <span>
+       </span>
+       UPCOMING
+      </span>
+      <h2 data-i18n="schedule_heading">
+       WHAT'S
+       <em>
+        NEXT.
+       </em>
+      </h2>
+     </div>
+     <p class="section-intro" data-i18n="schedule_intro">
+      The schedule changes with the games,
+          events and community moments that deserve
+          to be shared.
+     </p>
+    </div>
+    <div class="schedule-grid">
+     <!-- Schedule 1 -->
+     <article class="schedule-card featured">
+      <span class="schedule-label" data-i18n="schedule1_label">
+       NEXT SESSION
+      </span>
+      <div class="schedule-time" data-i18n="schedule1_time">
+       Friday · 6:00 PM
+      </div>
+      <h3 data-i18n="schedule1_title">
+       LIVE GAMING
+      </h3>
+      <p data-i18n="schedule1_desc">
+       Competitive gameplay,
+            community interaction and everything happening in the moment.
+      </p>
+      <span class="schedule-arrow">
+       &nearrow;
+      </span>
+     </article>
+     <!-- Schedule 2 -->
+     <article class="schedule-card">
+      <span class="schedule-label" data-i18n="schedule2_label">
+       COMMUNITY
+      </span>
+      <div class="schedule-time" data-i18n="schedule2_time">
+       Public
+      </div>
+      <h3 data-i18n="schedule2_title">
+       LOUNGE
+      </h3>
+      <p data-i18n="schedule2_desc">
+       Talk, play and connect
+            with the people behind
+            the community.
+      </p>
+      <span class="schedule-arrow">
+       &nearrow;
+      </span>
+     </article>
+     <!-- Schedule 3 -->
+     <article class="schedule-card">
+      <span class="schedule-label" data-i18n="schedule3_label">
+       SPECIAL
+      </span>
+      <div class="schedule-time" data-i18n="schedule3_time">
+       SOON
+      </div>
+      <h3 data-i18n="schedule3_title">
+       EVENT NIGHT
+      </h3>
+      <p data-i18n="schedule3_desc">
+       Special streams,
+            challenges and moments
+            worth remembering.
+      </p>
+      <span class="schedule-arrow">
+       &nearrow;
+      </span>
+     </article>
+    </div>
+   </section>
+   <!-- =================================================
+         ABOUT
+    ================================================== -->
+   <section class="about-section section-shell" id="about">
+    <div class="about-big">
+     <span class="eyebrow" data-i18n="about_eyebrow">
+      <span>
+      </span>
+      THE CLAN
+     </span>
+     <h2 data-i18n="about_heading">
+      MORE THAN
+      <br/>
+      A STREAM
+      <br/>
+      <em>
+       n0w or neVer
+      </em>
+     </h2>
+    </div>
+    <div class="about-copy">
+     <p class="lead" data-i18n="about_lead">
+      n0w or neVer is a clan and community
+          created by crAzy cAp around gaming,
+          competition and real people sharing
+          the experience together.
+     </p>
+     <p data-i18n="about_desc">
+      This platform brings the n0w or neVer community
+          together around live gaming, Twitch and Discord.
+     </p>
+     <!-- Principles -->
+     <div class="principles">
+      <div>
+       <span>
+       </span>
+       <strong data-i18n="principle1_title">
+        AUTHENTIC
+       </strong>
+       <p data-i18n="principle1_desc">
+        Real people. Real moments.
+       </p>
+      </div>
+      <div>
+       <span>
+       </span>
+       <strong data-i18n="principle2_title">
+        CONNECTED
+       </strong>
+       <p data-i18n="principle2_desc">
+        Watch, chat and play together.
+       </p>
+      </div>
+      <div>
+       <span>
+       </span>
+       <strong data-i18n="principle3_title">
+        COMMUNITY
+       </strong>
+       <p data-i18n="principle3_desc">
+        One place for everyone who belongs.
+       </p>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- =================================================
+         COMMUNITY
+    ================================================== -->
+   <section class="community-cta section-shell" id="community">
+    <!-- Community Logo -->
+    <div class="cta-logo-wrap">
+     <img alt="n0w or neVer" src="logo.png"/>
+    </div>
+    <!-- Community Content -->
+    <div class="cta-content">
+     <span class="eyebrow" data-i18n="community_eyebrow">
+      <span>
+      </span>
+      COMMUNITY FIRST
+     </span>
+     <h2 data-i18n="community_heading">
+      DON'T JUST WATCH
+      <br/>
+      <em>
+       BE PART OF IT
+      </em>
+     </h2>
+     <p data-i18n="community_desc">
+      Join the official n0w or neVer Discord community.
+     </p>
+     <!-- Community Buttons -->
+     <div class="hero-actions">
+      <a class="button button-primary" data-i18n="community_discord" href="https://discord.gg/TmPJpB9x" rel="noopener" target="_blank">
+       JOIN DISCORD &nearrow;
+      </a>
+      <a class="button button-ghost" data-i18n="community_watch" href="#live">
+       WATCH THE STREAM
+      </a>
+     </div>
+    </div>
+   </section>
+  </main>
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+  <footer>
+   <!-- Footer Brand -->
+   <div class="brand footer-brand">
+    <img alt="n0w or neVer logo" class="brand-logo" src="logo.png"/>
+    <span class="brand-copy">
+     <strong>
+      n0w or neVer
+     </strong>
+     <small>
+      CLAN &middot; LIVE &middot; COMMUNITY
+     </small>
+    </span>
+   </div>
+   <!-- Copyright -->
+   <span id="footerCopy" data-i18n="footer_copy"></span>
+
+   <!-- Legal Links -->
+   <span class="footer-legal">
+    <a data-i18n="footer_imprint" href="impressum.html" style="margin-right: 30px;">
+     Imprint
+    </a>
+    <a data-i18n="footer_privacy" href="datenschutz.html">
+     Privacy Policy
+    </a>
+   </span>
+   <!-- Back To Top -->
+   <a data-i18n="footer_top" href="#top">
+    BACK TO TOP &uarr;
+   </a>
+  </footer>
+  <!-- =====================================================
+       WEBSITE JAVASCRIPT
+  ====================================================== -->
+  <script src="script.js">
+  </script>
+ </body>
+</html>
