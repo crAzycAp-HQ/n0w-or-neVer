@@ -1674,6 +1674,28 @@ body * {
   transition: .2s;
 }
 
+.language-flag {
+  display: inline-block;
+  width: 20px;
+  height: 14px;
+  flex: 0 0 20px;
+  vertical-align: middle;
+  margin-right: 5px;
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, .18);
+}
+
+.language-option {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.language-option .language-flag {
+  margin-right: 2px;
+}
+
 .language-dropdown-button::after {
   content: "";
   display: inline-block;

@@ -50,15 +50,34 @@
    <!-- Header Status -->
    <div class="header-actions">
     <div class="language-switcher">
-     <button aria-expanded="false" aria-haspopup="true" class="language-dropdown-button" id="languageDropdownButton" type="button">
-      English
+     <button aria-expanded="false" aria-haspopup="true" aria-label="Select language" class="language-dropdown-button" id="languageDropdownButton" type="button">
+      <svg class="language-flag flag-gb" aria-hidden="true" viewBox="0 0 60 40" role="img">
+       <rect width="60" height="40" fill="#012169"/>
+       <path d="M0 0 60 40M60 0 0 40" stroke="#fff" stroke-width="10"/>
+       <path d="M0 0 60 40M60 0 0 40" stroke="#c8102e" stroke-width="4"/>
+       <path d="M30 0v40M0 20h60" stroke="#fff" stroke-width="16"/>
+       <path d="M30 0v40M0 20h60" stroke="#c8102e" stroke-width="8"/>
+      </svg>
+      <span class="language-label">English</span>
      </button>
      <div class="language-dropdown" id="languageDropdown" role="menu">
       <button class="language-option" data-lang="en" role="menuitem" type="button">
-       English
+       <svg class="language-flag flag-gb" aria-hidden="true" viewBox="0 0 60 40" role="img">
+        <rect width="60" height="40" fill="#012169"/>
+        <path d="M0 0 60 40M60 0 0 40" stroke="#fff" stroke-width="10"/>
+        <path d="M0 0 60 40M60 0 0 40" stroke="#c8102e" stroke-width="4"/>
+        <path d="M30 0v40M0 20h60" stroke="#fff" stroke-width="16"/>
+        <path d="M30 0v40M0 20h60" stroke="#c8102e" stroke-width="8"/>
+       </svg>
+       <span>English</span>
       </button>
       <button class="language-option" data-lang="de" role="menuitem" type="button">
-       Deutsch
+       <svg class="language-flag flag-de" aria-hidden="true" viewBox="0 0 60 40" role="img">
+        <rect width="60" height="40" fill="#ffce00"/>
+         <rect width="60" height="13.33" fill="#000"/>
+         <rect width="60" height="13.34" y="13.33" fill="#dd0000"/>
+       </svg>
+       <span>Deutsch</span>
       </button>
      </div>
     </div>

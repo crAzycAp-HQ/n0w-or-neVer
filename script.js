@@ -155,6 +155,16 @@ const languageLabels = {
   de: "Deutsch"
 };
 
+const languageFlags = {
+  en: "gb",
+  de: "de"
+};
+
+const languageFlagMarkup = {
+  gb: `<rect width="60" height="40" fill="#012169"/><path d="M0 0 60 40M60 0 0 40" stroke="#fff" stroke-width="10"/><path d="M0 0 60 40M60 0 0 40" stroke="#c8102e" stroke-width="4"/><path d="M30 0v40M0 20h60" stroke="#fff" stroke-width="16"/><path d="M30 0v40M0 20h60" stroke="#c8102e" stroke-width="8"/>`,
+  de: `<rect width="60" height="40" fill="#ffce00"/><rect width="60" height="13.33" fill="#000"/><rect width="60" height="13.34" y="13.33" fill="#dd0000"/>`
+};
+
 function updateLegalLinks(lang) {
   const imprint = document.querySelector(".footer-legal a:nth-of-type(1)");
   const privacy = document.querySelector(".footer-legal a:nth-of-type(2)");
@@ -184,7 +194,15 @@ function setLanguage(lang) {
     element.innerHTML = value.replace("{year}", new Date().getFullYear());
   });
 
-  languageDropdownButton.textContent = languageLabels[lang];
+  const selectedFlag = languageDropdownButton.querySelector(".language-flag");
+  selectedFlag.className = `language-flag flag-${languageFlags[lang]}`;
+  selectedFlag.innerHTML = languageFlagMarkup[languageFlags[lang]];
+  languageDropdownButton.querySelector(".language-label").textContent =
+    languageLabels[lang];
+  languageDropdownButton.setAttribute(
+    "aria-label",
+    `Select language: ${languageLabels[lang]}`
+  );
 
   languageOptions.forEach((option) => {
     option.classList.toggle("active", option.dataset.lang === lang);
