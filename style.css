@@ -1653,16 +1653,18 @@ footer {
 /* =========================================================
    LANGUAGE SWITCHER
 ========================================================= */
+
 .language-switcher {
   display: inline-flex;
   align-items: center;
   gap: 4px;
   margin-right: 10px;
   padding: 3px;
-  border: 1px solid rgba(255,255,255,.12);
+  border: 1px solid rgba(255, 255, 255, .12);
   border-radius: 999px;
-  background: rgba(255,255,255,.035);
+  background: rgba(255, 255, 255, .035);
 }
+
 .language-button {
   border: 0;
   background: transparent;
@@ -1673,14 +1675,24 @@ footer {
   letter-spacing: 1px;
   cursor: pointer;
 }
+
 .language-button:hover,
 .language-button.active {
   color: var(--text);
-  background: rgba(255,255,255,.10);
+  background: rgba(255, 255, 255, .10);
 }
+
+.schedule-time-text {
+  white-space: nowrap;
+}
+
+.footer-legal {
+  display: inline-flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
 @media (max-width: 760px) {
   .language-switcher { margin-right: 4px; }
   .language-button { padding: 6px 7px; }
 }
-
-.footer-legal { display: inline-flex; gap: 30px; flex-wrap: wrap; }
