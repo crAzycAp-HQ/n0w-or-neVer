@@ -2,122 +2,77 @@
    TWITCH SETTINGS
 ========================================================= */
 
-const TWITCH_CHANNEL =
-  "crazycaptv";
-
-const TWITCH_URL =
-  `https://www.twitch.tv/${TWITCH_CHANNEL}`;
-
-const TWITCH_PARENT =
-  "crazycap-hq.github.io";
+const TWITCH_CHANNEL = "crazycaptv";
+const TWITCH_URL = `https://www.twitch.tv/${TWITCH_CHANNEL}`;
+const TWITCH_PARENT = "crazycap-hq.github.io";
 
 
 /* =========================================================
-   ELEMENTS
-========================================================= */
-
-const twitchPlayerFrame =
-  document.getElementById("twitchPlayer");
-
-const streamStatus =
-  document.getElementById("streamStatus");
-
-const statusDetail =
-  document.getElementById("statusDetail");
-
-const statusDot =
-  document.getElementById("statusDot");
-
-const chatLiveDot =
-  document.getElementById("chatLiveDot");
-
-const twitchChat =
-  document.getElementById("twitchChat");
-
-const headerTwitchButton =
-  document.getElementById("headerTwitchButton");
-
-const menuButton =
-  document.getElementById("menuButton");
-
-
-/* =========================================================
-   LANGUAGE SYSTEM
-
-   English is the default. New languages can be added later
-   by adding another object to this translations collection
-   and another button with data-language="xx".
+   TRANSLATIONS
+   Add future languages here without changing the page layout.
 ========================================================= */
 
 const translations = {
-
   en: {
     nav_live: "LIVE",
     nav_schedule: "SCHEDULE",
     nav_about: "ABOUT",
     nav_community: "COMMUNITY",
 
-    eyebrow_official: "OFFICIAL n0w or neVer CLAN",
-    hero_desc_1: "n0w or neVer is the clan and community built by",
-    hero_desc_2: "Gaming, live moments and a place for people who want to be part of more than just another stream.",
-    watch_live: "WATCH LIVE",
-    join_discord: "JOIN DISCORD ↗",
-    clan_identity: "CLAN IDENTITY",
-    twitch_stream: "TWITCH STREAM",
-    creator_owner: "CREATOR & OWNER",
+    hero_eyebrow: "OFFICIAL n0w or neVer CLAN",
+    hero_desc: "n0w or neVer is the clan and community built by <strong>crAzy cAp</strong>. Gaming, live moments and a place for people who want to be part of more than just another stream.",
+    hero_watch: "WATCH LIVE <b>▶</b>",
+    hero_discord: "JOIN DISCORD ↗",
+    hero_meta_clan: "CLAN IDENTITY",
+    hero_meta_creator: "CREATOR & OWNER",
 
-    live_channel: "LIVE CHANNEL",
-    watch_the: "WATCH THE",
-    stream: "STREAM",
-    twitch_live: "TWITCH LIVE",
-    live_title: "n0w or neVer — Live Stream",
-    live_desc: "Watch crAzy cAp live on Twitch directly from the official n0w or neVer website.",
-    live_chat: "LIVE CHAT",
-    twitch_community: "TWITCH COMMUNITY",
+    live_eyebrow: "LIVE CHANNEL",
+    live_heading: "WATCH THE <em>STREAM</em>",
+    live_status: "Twitch channel",
+    live_detail: "Live when crAzy cAp is streaming",
+    stream_tag: "TWITCH LIVE",
+    stream_title: "n0w or neVer — Live Stream",
+    stream_desc: "Watch crAzy cAp live on Twitch directly from the official n0w or neVer website.",
+    chat_title: "LIVE CHAT",
+    chat_subtitle: "TWITCH COMMUNITY",
 
-    upcoming: "UPCOMING",
-    whats: "WHAT'S",
-    next: "NEXT.",
+    schedule_eyebrow: "UPCOMING",
+    schedule_heading: "WHAT'S <em>NEXT.</em>",
     schedule_intro: "The schedule changes with the games, events and community moments that deserve to be shared.",
-    next_session: "NEXT SESSION",
-    friday_time: "Friday · 18:00",
-    live_gaming: "LIVE GAMING",
-    schedule_desc1: "Competitive gameplay, community interaction and everything happening in the moment.",
-    community_label: "COMMUNITY",
-    lounge_title: "LOUNGE",
-    sunday_time: "Sunday · 18:00",
-    schedule_desc2: "Talk, play and connect with the people behind the community.",
-    special: "SPECIAL",
-    soon: "SOON",
-    event_night: "EVENT NIGHT",
-    schedule_desc3: "Special streams, challenges and moments worth remembering.",
+    schedule1_label: "NEXT SESSION",
+    schedule1_time: "Friday · 6:00 PM",
+    schedule1_title: "LIVE GAMING",
+    schedule1_desc: "Competitive gameplay, community interaction and everything happening in the moment.",
+    schedule2_label: "COMMUNITY",
+    schedule2_time: "PUBLIC",
+    schedule2_title: "LOUNGE",
+    schedule2_desc: "Sunday · 6:00 PM — Talk, play and connect with the people behind the community.",
+    schedule3_label: "SPECIAL",
+    schedule3_time: "SOON",
+    schedule3_title: "EVENT NIGHT",
+    schedule3_desc: "Special streams, challenges and moments worth remembering.",
 
-    the_clan: "THE CLAN",
-    more_than: "MORE THAN",
-    a_stream: "A STREAM",
-    clan_name: "n0w or neVer",
+    about_eyebrow: "THE CLAN",
+    about_heading: "MORE THAN<br>A STREAM<br><em>n0w or neVer</em>",
     about_lead: "n0w or neVer is a clan and community created by crAzy cAp around gaming, competition and real people sharing the experience together.",
-    about_text: "This platform brings the n0w or neVer community together around live gaming, Twitch and Discord.",
-    authentic: "AUTHENTIC",
-    authentic_desc: "Real people. Real moments.",
-    connected: "CONNECTED",
-    connected_desc: "Watch, chat and play together.",
-    community_value: "COMMUNITY",
-    community_desc: "One place for everyone who belongs.",
+    about_desc: "This platform brings the n0w or neVer community together around live gaming, Twitch and Discord.",
+    principle1_title: "AUTHENTIC",
+    principle1_desc: "Real people. Real moments.",
+    principle2_title: "CONNECTED",
+    principle2_desc: "Watch, chat and play together.",
+    principle3_title: "COMMUNITY",
+    principle3_desc: "One place for everyone who belongs.",
 
-    community_first: "COMMUNITY FIRST",
-    dont_just_watch: "DON'T JUST WATCH",
-    be_part: "BE PART OF IT",
-    join_desc: "Join the official n0w or neVer Discord community.",
-    watch_stream: "WATCH THE STREAM",
+    community_eyebrow: "COMMUNITY FIRST",
+    community_heading: "DON'T JUST WATCH<br><em>BE PART OF IT</em>",
+    community_desc: "Join the official n0w or neVer Discord community.",
+    community_discord: "JOIN DISCORD ↗",
+    community_watch: "WATCH THE STREAM",
 
-    copyright: "crAzy cAp — n0w or neVer Clan. All rights reserved.",
-    imprint: "Imprint",
-    privacy: "Privacy Policy",
-    back_top: "BACK TO TOP ↑",
-
-    twitch_channel: "Twitch channel",
-    twitch_status: "Live when crAzy cAp is streaming"
+    footer_copy: "© {year} crAzy cAp — n0w or neVer Clan. All rights reserved.",
+    footer_imprint: "Imprint",
+    footer_privacy: "Privacy Policy",
+    footer_top: "BACK TO TOP ↑"
   },
 
   de: {
@@ -126,172 +81,169 @@ const translations = {
     nav_about: "ÜBER UNS",
     nav_community: "COMMUNITY",
 
-    eyebrow_official: "OFFIZIELLER n0w or neVer CLAN",
-    hero_desc_1: "n0w or neVer ist der von",
-    hero_desc_2: "Gaming, Live-Momente und ein Ort für alle, die mehr als nur einen weiteren Stream erleben wollen.",
-    watch_live: "LIVE ANSEHEN",
-    join_discord: "DISCORD BEITRETEN ↗",
-    clan_identity: "CLAN IDENTITÄT",
-    twitch_stream: "TWITCH STREAM",
-    creator_owner: "CREATOR & INHABER",
+    hero_eyebrow: "OFFIZIELLER n0w or neVer CLAN",
+    hero_desc: "n0w or neVer ist der von <strong>crAzy cAp</strong> aufgebaute Clan und die Community. Gaming, Live-Momente und ein Ort für alle, die Teil von mehr als nur einem weiteren Stream sein wollen.",
+    hero_watch: "LIVE ANSEHEN <b>▶</b>",
+    hero_discord: "DISCORD BEITRETEN ↗",
+    hero_meta_clan: "CLAN-IDENTITÄT",
+    hero_meta_creator: "CREATOR & INHABER",
 
-    live_channel: "LIVE CHANNEL",
-    watch_the: "DEN",
-    stream: "STREAM ANSEHEN",
-    twitch_live: "TWITCH LIVE",
-    live_title: "n0w or neVer — Live Stream",
-    live_desc: "Sieh crAzy cAp direkt auf der offiziellen n0w or neVer Website live auf Twitch.",
-    live_chat: "LIVE CHAT",
-    twitch_community: "TWITCH COMMUNITY",
+    live_eyebrow: "LIVE-KANAL",
+    live_heading: "DEN <em>STREAM</em> ANSEHEN",
+    live_status: "Twitch-Kanal",
+    live_detail: "Live, wenn crAzy cAp streamt",
+    stream_tag: "TWITCH LIVE",
+    stream_title: "n0w or neVer — Live-Stream",
+    stream_desc: "Sieh crAzy cAp live auf Twitch direkt über die offizielle n0w or neVer Website.",
+    chat_title: "LIVE-CHAT",
+    chat_subtitle: "TWITCH COMMUNITY",
 
-    upcoming: "ALS NÄCHSTES",
-    whats: "WAS KOMMT",
-    next: "ALS NÄCHSTES.",
-    schedule_intro: "Der Zeitplan richtet sich nach Games, Events und Community-Momenten, die geteilt werden sollen.",
-    next_session: "NÄCHSTE SESSION",
-    friday_time: "Freitag · 18:00 Uhr",
-    live_gaming: "LIVE GAMING",
-    schedule_desc1: "Wettbewerbsorientiertes Gameplay, Community-Interaktion und alles, was gerade passiert.",
-    community_label: "COMMUNITY",
-    lounge_title: "LOUNGE",
-    sunday_time: "Sonntag · 18:00 Uhr",
-    schedule_desc2: "Reden, spielen und gemeinsam mit den Menschen hinter der Community verbinden.",
-    special: "SPECIAL",
-    soon: "DEMNÄCHST",
-    event_night: "EVENT NIGHT",
-    schedule_desc3: "Besondere Streams, Challenges und Momente, die in Erinnerung bleiben.",
+    schedule_eyebrow: "ALS NÄCHSTES",
+    schedule_heading: "WAS KOMMT <em>ALS NÄCHSTES.</em>",
+    schedule_intro: "Der Zeitplan richtet sich nach Spielen, Events und Community-Momenten, die geteilt werden sollen.",
+    schedule1_label: "NÄCHSTE SESSION",
+    schedule1_time: "Freitag · 18:00 Uhr",
+    schedule1_title: "LIVE GAMING",
+    schedule1_desc: "Wettbewerbsorientiertes Gameplay, Community-Interaktion und alles, was gerade passiert.",
+    schedule2_label: "COMMUNITY",
+    schedule2_time: "PUBLIC",
+    schedule2_title: "LOUNGE",
+    schedule2_desc: "Sonntag · 18:00 Uhr — Reden, spielen und gemeinsam mit der Community Zeit verbringen.",
+    schedule3_label: "SPECIAL",
+    schedule3_time: "BALD",
+    schedule3_title: "EVENT-ABEND",
+    schedule3_desc: "Spezielle Streams, Challenges und Momente, die in Erinnerung bleiben.",
 
-    the_clan: "DER CLAN",
-    more_than: "MEHR ALS",
-    a_stream: "EIN STREAM",
-    clan_name: "n0w or neVer",
+    about_eyebrow: "DER CLAN",
+    about_heading: "MEHR ALS<br>NUR EIN<br><em>STREAM</em>",
     about_lead: "n0w or neVer ist ein von crAzy cAp gegründeter Clan und eine Community rund um Gaming, Wettbewerb und echte Menschen, die das Erlebnis gemeinsam teilen.",
-    about_text: "Diese Plattform bringt die n0w or neVer Community rund um Live-Gaming, Twitch und Discord zusammen.",
-    authentic: "AUTHENTISCH",
-    authentic_desc: "Echte Menschen. Echte Momente.",
-    connected: "VERBUNDEN",
-    connected_desc: "Zuschauen, chatten und gemeinsam spielen.",
-    community_value: "COMMUNITY",
-    community_desc: "Ein Ort für alle, die dazugehören.",
+    about_desc: "Diese Plattform bringt die n0w or neVer Community rund um Live-Gaming, Twitch und Discord zusammen.",
+    principle1_title: "AUTHENTISCH",
+    principle1_desc: "Echte Menschen. Echte Momente.",
+    principle2_title: "VERBUNDEN",
+    principle2_desc: "Zusammen zuschauen, chatten und spielen.",
+    principle3_title: "COMMUNITY",
+    principle3_desc: "Ein Ort für alle, die dazugehören.",
 
-    community_first: "COMMUNITY ZUERST",
-    dont_just_watch: "NICHT NUR ZUSCHAUEN",
-    be_part: "SEI DABEI",
-    join_desc: "Tritt der offiziellen n0w or neVer Discord Community bei.",
-    watch_stream: "STREAM ANSEHEN",
+    community_eyebrow: "COMMUNITY ZUERST",
+    community_heading: "NICHT NUR ZUSCHAUEN<br><em>SEI DABEI</em>",
+    community_desc: "Tritt der offiziellen n0w or neVer Discord-Community bei.",
+    community_discord: "DISCORD BEITRETEN ↗",
+    community_watch: "STREAM ANSEHEN",
 
-    copyright: "crAzy cAp — n0w or neVer Clan. Alle Rechte vorbehalten.",
-    imprint: "Impressum",
-    privacy: "Datenschutz",
-    back_top: "NACH OBEN ↑",
-
-    twitch_channel: "Twitch-Kanal",
-    twitch_status: "Live, wenn crAzy cAp streamt"
+    footer_copy: "© {year} crAzy cAp — n0w or neVer Clan. Alle Rechte vorbehalten.",
+    footer_imprint: "Impressum",
+    footer_privacy: "Datenschutz",
+    footer_top: "NACH OBEN ↑"
   }
 };
 
 
+/* =========================================================
+   LANGUAGE DROPDOWN
+========================================================= */
+
+const languageDropdownButton =
+  document.getElementById("languageDropdownButton");
+const languageDropdown =
+  document.getElementById("languageDropdown");
+const languageOptions =
+  document.querySelectorAll(".language-option");
+
+const languageLabels = {
+  en: "English",
+  de: "Deutsch"
+};
+
 function updateLegalLinks(lang) {
-  const imprint = document.getElementById("footerImprint");
-  const privacy = document.getElementById("footerPrivacy");
+  const imprint = document.querySelector(".footer-legal a:nth-of-type(1)");
+  const privacy = document.querySelector(".footer-legal a:nth-of-type(2)");
 
-  if (imprint) {
-    imprint.href = lang === "de" ? "impressum.html" : "imprint.html";
-  }
+  if (!imprint || !privacy) return;
 
-  if (privacy) {
-    privacy.href = lang === "de" ? "datenschutz.html" : "privacy-policy.html";
+  if (lang === "de") {
+    imprint.href = "impressum.html";
+    privacy.href = "datenschutz.html";
+  } else {
+    imprint.href = "imprint.html";
+    privacy.href = "privacy-policy.html";
   }
 }
 
-
 function setLanguage(lang) {
-  if (!translations[lang]) {
-    lang = "en";
-  }
+  if (!translations[lang]) lang = "en";
 
   document.documentElement.lang = lang;
 
-  document
-    .querySelectorAll("[data-i18n]")
-    .forEach((element) => {
-      const key = element.dataset.i18n;
-      if (translations[lang][key] !== undefined) {
-        element.textContent = translations[lang][key];
-      }
-    });
+  document.querySelectorAll("[data-i18n]").forEach((element) => {
+    const key = element.dataset.i18n;
+    const value = translations[lang][key];
+    if (value === undefined) return;
 
-  document
-    .querySelectorAll(".language-button")
-    .forEach((button) => {
-      button.classList.toggle(
-        "active",
-        button.dataset.language === lang
-      );
-    });
+    element.innerHTML = value.replace("{year}", new Date().getFullYear());
+  });
 
-  streamStatus.textContent = translations[lang].twitch_channel;
-  statusDetail.textContent = translations[lang].twitch_status;
+  languageDropdownButton.textContent = languageLabels[lang];
+
+  languageOptions.forEach((option) => {
+    option.classList.toggle("active", option.dataset.lang === lang);
+  });
 
   updateLegalLinks(lang);
 
-  document.title = lang === "de"
-    ? "n0w or neVer | Live mit crAzy cAp"
-    : "n0w or neVer | Live by crAzy cAp";
+  document.title =
+    lang === "de"
+      ? "n0w or neVer | Live mit crAzy cAp"
+      : "n0w or neVer | Live by crAzy cAp";
 
-  localStorage.setItem(
-    "n0w-or-neVer-language",
-    lang
-  );
+  localStorage.setItem("n0w-or-neVer-language", lang);
+  languageDropdown.classList.remove("open");
+  languageDropdownButton.setAttribute("aria-expanded", "false");
 }
 
+languageDropdownButton.addEventListener("click", (event) => {
+  event.stopPropagation();
+  const isOpen = languageDropdown.classList.toggle("open");
+  languageDropdownButton.setAttribute("aria-expanded", String(isOpen));
+});
 
-document
-  .querySelectorAll(".language-button")
-  .forEach((button) => {
-    button.addEventListener("click", () => {
-      setLanguage(button.dataset.language);
-    });
+languageOptions.forEach((option) => {
+  option.addEventListener("click", () => {
+    setLanguage(option.dataset.lang);
   });
+});
+
+document.addEventListener("click", () => {
+  languageDropdown.classList.remove("open");
+  languageDropdownButton.setAttribute("aria-expanded", "false");
+});
 
 
 /* =========================================================
-   BASIC SETTINGS
+   ELEMENTS
 ========================================================= */
 
-headerTwitchButton.href =
-  TWITCH_URL;
+const twitchPlayerFrame = document.getElementById("twitchPlayer");
+const streamStatus = document.getElementById("streamStatus");
+const statusDetail = document.getElementById("statusDetail");
+const statusDot = document.getElementById("statusDot");
+const chatLiveDot = document.getElementById("chatLiveDot");
+const twitchChat = document.getElementById("twitchChat");
+const headerTwitchButton = document.getElementById("headerTwitchButton");
+const menuButton = document.getElementById("menuButton");
 
-document.getElementById("year").textContent =
-  new Date().getFullYear();
-
-
+headerTwitchButton.href = TWITCH_URL;
 /* =========================================================
    TWITCH VIDEO PLAYER
 ========================================================= */
 
-const videoIframe =
-  document.createElement("iframe");
-
+const videoIframe = document.createElement("iframe");
 videoIframe.src =
   `https://player.twitch.tv/?channel=${TWITCH_CHANNEL}&parent=${TWITCH_PARENT}&muted=false`;
-
-videoIframe.setAttribute(
-  "allowfullscreen",
-  "true"
-);
-
-videoIframe.setAttribute(
-  "allow",
-  "autoplay; fullscreen"
-);
-
-videoIframe.frameBorder =
-  "0";
-
-twitchPlayerFrame.appendChild(
-  videoIframe
-);
+videoIframe.setAttribute("allowfullscreen", "true");
+videoIframe.setAttribute("allow", "autoplay; fullscreen");
+videoIframe.frameBorder = "0";
+twitchPlayerFrame.appendChild(videoIframe);
 
 statusDot.classList.remove("live");
 chatLiveDot.classList.add("offline");
@@ -309,30 +261,19 @@ twitchChat.src =
    MOBILE MENU
 ========================================================= */
 
-menuButton.addEventListener(
-  "click",
-  () => {
-    document
-      .querySelector(".desktop-nav")
-      .classList.toggle("mobile-open");
-  }
-);
+menuButton.addEventListener("click", () => {
+  document.querySelector(".desktop-nav").classList.toggle("mobile-open");
+});
 
-document
-  .querySelectorAll(".desktop-nav a")
-  .forEach((link) => {
-    link.addEventListener("click", () => {
-      document
-        .querySelector(".desktop-nav")
-        .classList.remove("mobile-open");
-    });
+document.querySelectorAll(".desktop-nav a").forEach((link) => {
+  link.addEventListener("click", () => {
+    document.querySelector(".desktop-nav").classList.remove("mobile-open");
   });
+});
 
 
 /* =========================================================
-   START LANGUAGE
+   INITIAL LANGUAGE
 ========================================================= */
 
-setLanguage(
-  localStorage.getItem("n0w-or-neVer-language") || "en"
-);
+setLanguage(localStorage.getItem("n0w-or-neVer-language") || "de");

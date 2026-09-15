@@ -7,39 +7,35 @@
   <title>Impressum | n0w or neVer</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    .legal-page { max-width: 780px; margin: 0 auto; padding: 110px 24px 100px; color: var(--text); line-height: 1.7; }
+    .legal-page { max-width: 780px; margin: 0 auto; padding: 140px 24px 100px; color: var(--text); line-height: 1.7; }
     .legal-page h1 { font-family: "Space Grotesk", Arial, sans-serif; font-size: clamp(28px, 5vw, 40px); margin-bottom: 8px; }
     .legal-page h2 { font-family: "Space Grotesk", Arial, sans-serif; font-size: 20px; margin: 40px 0 12px; color: var(--ice); }
-    .legal-page p, .legal-page li { color: var(--muted); font-size: 15px; }
+    .legal-page p { color: var(--muted); font-size: 15px; }
     .legal-page a { color: var(--cyan); }
     .legal-page .placeholder { color: #ff9f6b; }
-    .legal-top { display:flex; justify-content:space-between; align-items:center; gap:20px; margin-bottom:24px; flex-wrap:wrap; }
-    .legal-back { font: 11px "DM Mono", monospace; letter-spacing:1px; color:var(--cyan); text-decoration:none; }
-    .legal-language { display:inline-flex; gap:4px; padding:3px; border:1px solid rgba(255,255,255,.12); border-radius:999px; background:rgba(255,255,255,.035); }
-    .legal-language a { padding:6px 9px; border-radius:999px; font:700 10px "DM Mono", monospace; letter-spacing:1px; text-decoration:none; color:var(--muted); }
-    .legal-language a.active, .legal-language a:hover { color:var(--text); background:rgba(255,255,255,.10); }
+    .legal-toolbar { display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:28px; }
+    .legal-back { display:inline-block; font:11px "DM Mono", monospace; letter-spacing:1px; color:var(--cyan); text-decoration:none; }
+    .legal-lang { display:flex; gap:10px; font:10px "DM Mono", monospace; letter-spacing:1px; }
+    .legal-lang a { text-decoration:none; color:#718096; }
+    .legal-lang a.active, .legal-lang a:hover { color:#fff; }
   </style>
 </head>
-<body style="background: var(--bg);">
-  <div class="legal-page">
-    <div class="legal-top">
+<body>
+  <main class="legal-page">
+    <div class="legal-toolbar">
       <a class="legal-back" href="index.html">← ZURÜCK ZUR STARTSEITE</a>
-      <div class="legal-language">
-        <a class="" href="imprint.html">English</a>
-        <a class="active" href="impressum.html">Deutsch</a>
-      </div>
+      <nav class="legal-lang" aria-label="Language"><a class="active" href="impressum.html">Deutsch</a><a href="imprint.html">English</a></nav>
     </div>
-
     <h1>Impressum</h1>
-    <p>Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz).</p>
+    <p>Angaben gemäß § 5 DDG. Dieses Impressum gilt für die Website n0w or neVer und deren Inhalte.</p>
     <h2>Kontakt</h2>
     <p>E-Mail: <span class="placeholder">crazycap.hq@gmail.com</span></p>
-    <h2>Verantwortlich für Inhalte</h2>
-    <p>Als Diensteanbieter sind wir gemäß den allgemeinen gesetzlichen Vorschriften für eigene Inhalte auf dieser Website verantwortlich. Eine Verpflichtung zur Überwachung übermittelter oder gespeicherter fremder Informationen besteht grundsätzlich nicht. Gesetzliche Pflichten zur Entfernung oder Sperrung der Nutzung von Informationen bleiben unberührt.</p>
+    <h2>Haftung für Inhalte</h2>
+    <p>Als Diensteanbieter sind wir gemäß den allgemeinen Gesetzen für eigene Inhalte auf dieser Website verantwortlich. Wir sind jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt.</p>
     <h2>Haftung für Links</h2>
-    <p>Diese Website enthält Links zu externen Websites Dritter, insbesondere Twitch und Discord. Auf deren Inhalte haben wir keinen Einfluss und übernehmen daher keine Haftung für fremde Inhalte. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße geprüft; rechtswidrige Inhalte waren zu diesem Zeitpunkt nicht erkennbar. Eine permanente Kontrolle der verlinkten Seiten ist ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar.</p>
+    <p>Diese Website enthält Links zu externen Websites Dritter, insbesondere Twitch und Discord. Auf deren Inhalte haben wir keinen Einfluss und können hierfür keine Haftung übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße geprüft; rechtswidrige Inhalte waren zu diesem Zeitpunkt nicht erkennbar. Eine permanente Kontrolle der verlinkten Seiten ist ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar.</p>
     <h2>Urheberrecht</h2>
-    <p>Die von der Seitenbetreiberin bzw. dem Seitenbetreiber erstellten Inhalte und Werke auf dieser Website, einschließlich Logo und Texten, unterliegen dem deutschen Urheberrecht. Beiträge Dritter sind als solche gekennzeichnet. Downloads und Kopien dieser Website sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.</p>
-  </div>
+    <p>Die vom Betreiber dieser Website erstellten Inhalte und Werke, insbesondere Logo und Texte, unterliegen dem deutschen Urheberrecht. Beiträge Dritter sind entsprechend gekennzeichnet. Downloads und Kopien dieser Website sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.</p>
+  </main>
 </body>
 </html>

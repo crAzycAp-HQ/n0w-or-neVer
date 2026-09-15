@@ -1649,50 +1649,118 @@ footer {
 
 }
 
+/* =========================================
+   GLOBAL TYPOGRAPHY
+   All visible website text is italic.
+========================================= */
 
-/* =========================================================
-   LANGUAGE SWITCHER
-========================================================= */
+body,
+body * {
+  font-style: italic !important;
+}
+
+
+/* =========================================
+   LANGUAGE DROPDOWN
+========================================= */
 
 .language-switcher {
+  position: relative;
   display: inline-flex;
   align-items: center;
-  gap: 4px;
-  margin-right: 10px;
-  padding: 3px;
-  border: 1px solid rgba(255, 255, 255, .12);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, .035);
+  flex-shrink: 0;
 }
 
-.language-button {
-  border: 0;
-  background: transparent;
-  color: var(--muted);
-  padding: 6px 9px;
+.language-dropdown-button {
+  min-width: 92px;
+  border: 1px solid rgba(159, 176, 199, .25);
   border-radius: 999px;
-  font: 700 10px "DM Mono", monospace;
+  background: rgba(255, 255, 255, .02);
+  color: #9fb0c7;
+  padding: 8px 13px;
+  font: 10px "DM Mono", monospace;
   letter-spacing: 1px;
   cursor: pointer;
+  transition: .2s;
 }
 
-.language-button:hover,
-.language-button.active {
-  color: var(--text);
-  background: rgba(255, 255, 255, .10);
+.language-dropdown-button::after {
+  content: "▾";
+  margin-left: 8px;
+  color: var(--cyan);
 }
 
-.schedule-time-text {
+.language-dropdown-button:hover,
+.language-dropdown-button[aria-expanded="true"] {
+  color: #fff;
+  border-color: var(--cyan);
+  background: rgba(22, 214, 255, .07);
+}
+
+.language-dropdown {
+  position: absolute;
+  top: calc(100% + 9px);
+  right: 0;
+  min-width: 118px;
+  padding: 6px;
+  display: none;
+  flex-direction: column;
+  gap: 3px;
+  background: rgba(5, 11, 19, .98);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, .45);
+  backdrop-filter: blur(16px);
+}
+
+.language-dropdown.open {
+  display: flex;
+}
+
+.language-option {
+  width: 100%;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #91a0b4;
+  padding: 9px 10px;
+  text-align: left;
+  font: 10px "DM Mono", monospace;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.language-option:hover,
+.language-option.active {
+  color: #fff;
+  background: rgba(22, 214, 255, .09);
+}
+
+
+/* =========================================
+   SCHEDULE LINE CONTROL
+========================================= */
+
+.schedule-time {
   white-space: nowrap;
 }
 
-.footer-legal {
-  display: inline-flex;
-  gap: 30px;
-  flex-wrap: wrap;
+.schedule-card h3 {
+  white-space: nowrap;
 }
 
-@media (max-width: 760px) {
-  .language-switcher { margin-right: 4px; }
-  .language-button { padding: 6px 7px; }
+@media (max-width: 560px) {
+  .schedule-card h3 {
+    white-space: normal;
+  }
+
+  .schedule-time {
+    font-size: clamp(30px, 9vw, 46px);
+  }
+
+  .language-dropdown-button {
+    min-width: 82px;
+    padding: 7px 10px;
+  }
 }

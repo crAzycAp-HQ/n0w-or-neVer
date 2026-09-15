@@ -7,46 +7,51 @@
   <title>Datenschutz | n0w or neVer</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    .legal-page { max-width: 780px; margin: 0 auto; padding: 110px 24px 100px; color: var(--text); line-height: 1.7; }
+    .legal-page { max-width: 780px; margin: 0 auto; padding: 140px 24px 100px; color: var(--text); line-height: 1.7; }
     .legal-page h1 { font-family: "Space Grotesk", Arial, sans-serif; font-size: clamp(28px, 5vw, 40px); margin-bottom: 8px; }
     .legal-page h2 { font-family: "Space Grotesk", Arial, sans-serif; font-size: 20px; margin: 40px 0 12px; color: var(--ice); }
     .legal-page p, .legal-page li { color: var(--muted); font-size: 15px; }
     .legal-page a { color: var(--cyan); }
     .legal-page .placeholder { color: #ff9f6b; }
-    .legal-top { display:flex; justify-content:space-between; align-items:center; gap:20px; margin-bottom:24px; flex-wrap:wrap; }
-    .legal-back { font: 11px "DM Mono", monospace; letter-spacing:1px; color:var(--cyan); text-decoration:none; }
-    .legal-language { display:inline-flex; gap:4px; padding:3px; border:1px solid rgba(255,255,255,.12); border-radius:999px; background:rgba(255,255,255,.035); }
-    .legal-language a { padding:6px 9px; border-radius:999px; font:700 10px "DM Mono", monospace; letter-spacing:1px; text-decoration:none; color:var(--muted); }
-    .legal-language a.active, .legal-language a:hover { color:var(--text); background:rgba(255,255,255,.10); }
+    .legal-toolbar { display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:28px; }
+    .legal-back { display:inline-block; font:11px "DM Mono", monospace; letter-spacing:1px; color:var(--cyan); text-decoration:none; }
+    .legal-lang { display:flex; gap:10px; font:10px "DM Mono", monospace; letter-spacing:1px; }
+    .legal-lang a { text-decoration:none; color:#718096; }
+    .legal-lang a.active, .legal-lang a:hover { color:#fff; }
   </style>
 </head>
-<body style="background: var(--bg);">
-  <div class="legal-page">
-    <div class="legal-top">
+<body>
+  <main class="legal-page">
+    <div class="legal-toolbar">
       <a class="legal-back" href="index.html">← ZURÜCK ZUR STARTSEITE</a>
-      <div class="legal-language">
-        <a class="" href="imprint.html">English</a>
-        <a class="active" href="impressum.html">Deutsch</a>
-      </div>
+      <nav class="legal-lang" aria-label="Sprache"><a class="active" href="datenschutz.html">Deutsch</a><a href="privacy-policy.html">English</a></nav>
     </div>
-
     <h1>Datenschutz</h1>
-    <p>Diese Datenschutzerklärung informiert über die Verarbeitung personenbezogener Daten auf dieser Website nach der Datenschutz-Grundverordnung (DSGVO).</p>
+    <p>Diese Datenschutzerklärung erfolgt auf Grundlage der Datenschutz-Grundverordnung (DSGVO), die für den Betreiber in der EU bzw. Deutschland gilt.</p>
     <h2>1. Verantwortlicher</h2>
     <p>Verantwortlich für die Datenverarbeitung auf dieser Website ist:<br>E-Mail: <span class="placeholder">crazycap.hq@gmail.com</span></p>
     <h2>2. Hosting (GitHub Pages)</h2>
-    <p>Diese Website wird über GitHub Pages, einen Dienst von GitHub, Inc. (Unternehmen der Microsoft Corporation, USA), gehostet. Beim Aufruf können technisch notwendige Daten wie IP-Adresse, Datum und Uhrzeit des Zugriffs, Browsertyp und angeforderte Ressource in Server-Logdateien verarbeitet werden. Die Verarbeitung dient der technischen Bereitstellung und Sicherheit der Website. Weitere Informationen finden Sie in der <a href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener">Datenschutzerklärung von GitHub</a>.</p>
+    <p>Diese Website wird über GitHub Pages, einen Dienst der GitHub, Inc. (Unternehmen der Microsoft Corporation, USA), gehostet. Beim Aufruf der Website verarbeitet GitHub automatisch technische Daten wie IP-Adresse, Datum und Uhrzeit des Zugriffs, Browsertyp und das angeforderte Dokument. Diese Verarbeitung ist technisch erforderlich, um die Website bereitzustellen. Weitere Informationen findest du in der <a href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener">Datenschutzerklärung von GitHub</a>.</p>
     <h2>3. Eingebettete Twitch-Inhalte</h2>
-    <p>Diese Website bindet den Twitch-Livestream-Player und den Twitch-Livechat ein. Beim Laden dieser Inhalte wird eine Verbindung zu Servern von Twitch hergestellt. Dabei können Twitch technische Informationen wie Ihre IP-Adresse erhalten und Cookies bzw. vergleichbare Technologien einsetzen. Weitere Informationen finden Sie in der <a href="https://legal.twitch.tv/legal/privacy/" target="_blank" rel="noopener">Datenschutzerklärung von Twitch</a>.</p>
+    <p>Diese Website bindet den Twitch-Livestream und den Live-Chat ein. Beim Laden des Start- bzw. Live-Bereichs wird automatisch eine Verbindung zu Twitch-Servern hergestellt. Dabei kann Twitch erfahren, dass diese Website aufgerufen wurde. Es können Cookies gesetzt und Daten wie die IP-Adresse an Twitch bzw. Amazon, auch in die USA, übertragen werden. Die Einbindung erfolgt aus unserem berechtigten Interesse an der Darstellung unseres Streams. Weitere Informationen findest du in der <a href="https://legal.twitch.tv/legal/privacy/" target="_blank" rel="noopener">Datenschutzerklärung von Twitch</a>.</p>
     <h2>4. Schriftarten</h2>
-    <p>Die auf dieser Website verwendeten Schriftarten werden lokal eingebunden. Es wird dadurch keine Verbindung zu externen Font-Anbietern wie Google Fonts hergestellt.</p>
+    <p>Die auf dieser Website verwendeten Schriftarten werden lokal eingebunden. Es wird dadurch keine Verbindung zu externen Schriftanbieter-Servern wie Google Fonts hergestellt.</p>
     <h2>5. Links zu Discord</h2>
-    <p>Diese Website enthält einen Link zu unserem Discord-Server. Erst wenn Sie den Link aktiv anklicken, wird eine Verbindung zu Discord hergestellt. Für die anschließende Verarbeitung durch Discord gilt die dortige Datenschutzerklärung.</p>
-    <h2>6. Ihre Rechte</h2>
-    <p>Sie haben insbesondere das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch gegen bestimmte Verarbeitungen sowie das Recht, sich bei einer Datenschutzaufsichtsbehörde zu beschweren.</p>
-    <p>Zur Ausübung Ihrer Rechte können Sie uns jederzeit unter der oben genannten E-Mail-Adresse kontaktieren.</p>
+    <p>Diese Website enthält einen Link zu unserem Discord-Server. Der Link führt erst nach einem aktiven Klick zu Discord. Beim bloßen Besuch dieser Website werden dadurch keine Daten an Discord übertragen. Nach dem Aufruf des Links gilt die Datenschutzerklärung von Discord.</p>
+    <h2>6. Rechte betroffener Personen</h2>
+    <p>Du hast jederzeit das Recht auf:</p>
+    <ul>
+      <li>Auskunft über die zu deiner Person gespeicherten Daten (Art. 15 DSGVO)</li>
+      <li>Berichtigung unrichtiger Daten (Art. 16 DSGVO)</li>
+      <li>Löschung deiner Daten (Art. 17 DSGVO)</li>
+      <li>Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
+      <li>Datenübertragbarkeit (Art. 20 DSGVO)</li>
+      <li>Widerspruch gegen die Verarbeitung (Art. 21 DSGVO)</li>
+      <li>Beschwerde bei einer Datenschutzaufsichtsbehörde</li>
+    </ul>
+    <p>Zur Ausübung dieser Rechte genügt eine Kontaktaufnahme über die oben genannte E-Mail-Adresse.</p>
     <h2>7. Änderungen dieser Datenschutzerklärung</h2>
-    <p>Wir behalten uns vor, diese Datenschutzerklärung anzupassen, wenn sich die Funktionen dieser Website ändern, beispielsweise durch einen späteren Merch-Shop, Sponsoren oder Analysewerkzeuge. Maßgeblich ist die jeweils auf dieser Seite veröffentlichte Fassung.</p>
-  </div>
+    <p>Wir behalten uns vor, diese Datenschutzerklärung anzupassen, wenn sich die Funktionen dieser Website ändern, beispielsweise durch eine spätere Integration eines Merch-Shops, von Sponsoren oder Analysewerkzeugen. Es gilt jeweils die auf dieser Seite veröffentlichte aktuelle Fassung.</p>
+  </main>
 </body>
 </html>
