@@ -1358,6 +1358,35 @@ footer {
   text-align: center;
 }
 
+/* Legal pages use the same readable typography in both languages. */
+.legal-page,
+.legal-page * {
+  font-family: "Comic Sans MS", cursive !important;
+  font-style: normal !important;
+}
+
+.legal-page h1 {
+  font-size: clamp(28px, 5vw, 40px) !important;
+}
+
+.legal-page h2 {
+  font-size: 20px !important;
+}
+
+.legal-page p,
+.legal-page li {
+  font-size: 15px !important;
+}
+
+.legal-page .legal-back {
+  font-size: 11px !important;
+}
+
+.legal-page .legal-lang,
+.legal-page .legal-lang a {
+  font-size: 10px !important;
+}
+
 
 .footer-brand {
   transform:
