@@ -1,47 +1,71 @@
-# n0w or neVer
+# n0w or neVer — Official Twitch Website
 
-Offizielle Website des **n0w or neVer** Clans und der Community von **crAzy cAp**.
+Official website for the **n0w or neVer** clan and community by **crAzy cAp**.
 
-Die Website enthält:
+## Branding
 
-- eine zweisprachige Startseite auf Deutsch und Englisch
-- eingebetteten Twitch-Livestream und Twitch-Chat
-- Links zur n0w or neVer Discord-Community
-- einen Zeitplan-, About- und Community-Bereich
-- deutsche und englische Datenschutz- und Impressumsseiten
-- eine animierte, weich in den Hintergrund übergehende Logo-Darstellung
-- Comic Sans MS als globale Website-Schrift
+- Clan: n0w or neVer
+- Creator / owner: crAzy cAp
+- Official logo: `logo.png`
+- Discord: https://discord.gg/TmPJpB9x
+- Twitch: https://www.twitch.tv/crazycaptv
 
-## Dateien
+## Website features
 
-| Datei | Beschreibung |
+- German and English homepage content
+- Language dropdown with persisted browser preference
+- Twitch video player and read-only live chat
+- Schedule, About and Community sections
+- German and English imprint pages
+- German and English privacy policy pages
+- Comic Sans MS as the global website font
+- Soft, rounded logo presentation blended into the background
+- Responsive layout for desktop and mobile screens
+
+## Files
+
+| File | Description |
 | --- | --- |
-| `index.html` | Startseite |
-| `style.css` | Layout, Farben, Animationen und Responsive Design |
-| `script.js` | Sprachumschaltung, Twitch-Einbettung und Navigation |
-| `logo.png` | Website-Logo |
-| `impressum.html` | Impressum auf Deutsch |
-| `imprint.html` | Imprint auf Englisch |
-| `datenschutz.html` | Datenschutzerklärung auf Deutsch |
-| `privacy-policy.html` | Privacy Policy auf Englisch |
+| `index.html` | Main homepage |
+| `style.css` | Layout, colors, responsive design and animations |
+| `script.js` | Language switching, Twitch embeds and navigation |
+| `logo.png` | Official website logo |
+| `impressum.html` | German imprint |
+| `imprint.html` | English imprint |
+| `datenschutz.html` | German privacy policy |
+| `privacy-policy.html` | English privacy policy |
 
-## Lokal ansehen
+## Twitch embeds used
 
-Die Website benötigt keinen Build-Schritt. Sie kann über einen lokalen HTTP-Server gestartet werden.
+- Video player: `https://player.twitch.tv/?channel=crazycaptv&parent=crazycap-hq.github.io`
+- Live chat (read-only): `https://www.twitch.tv/embed/crazycaptv/chat?parent=crazycap-hq.github.io`
 
-Mit Python:
+Both embeds are plain iframes (no Twitch.Embed JavaScript API), built and inserted by `script.js`. The video iframe fills the full width and height of its 16:9 frame through CSS. Twitch displays its own offline screen inside the player when crAzy cAp is not live.
+
+### Channel and domain settings
+
+Both `TWITCH_CHANNEL` and `TWITCH_PARENT` are set at the top of `script.js`:
+
+- `TWITCH_CHANNEL` — the Twitch channel name, currently `crazycaptv`.
+- `TWITCH_PARENT` — the exact hostname where the site is served, for example `crazycap-hq.github.io`. Do not include `https://`, a path or a trailing slash.
+
+If the Twitch channel or website domain changes, update both values in `script.js`.
+
+## Run locally
+
+The website is made of static files and does not require a build step. Start a local HTTP server from the project root:
 
 ```bash
 python -m http.server 8765
 ```
 
-Danach im Browser öffnen:
+Open the homepage at:
 
 ```text
 http://127.0.0.1:8765/index.html
 ```
 
-Die Legal-Seiten sind direkt erreichbar:
+The legal pages can be opened directly:
 
 ```text
 http://127.0.0.1:8765/impressum.html
@@ -50,22 +74,18 @@ http://127.0.0.1:8765/datenschutz.html
 http://127.0.0.1:8765/privacy-policy.html
 ```
 
-## Sprache
+## GitHub Pages deployment
 
-Die Sprache wird über das Dropdown-Menü im Header gewechselt. Die Auswahl wird im Browser in `localStorage` gespeichert. Beim Wechsel auf Deutsch werden auch die deutschen Bezeichnungen und die deutschen Legal-Seiten verwendet.
+1. Open the repository on GitHub.
+2. Upload `index.html`, `style.css`, `script.js`, `logo.png`, the legal pages and `README.md` to the repository root.
+3. Commit the changes.
+4. In repository **Settings > Pages**, select **Deploy from a branch**.
+5. Select branch `main` and folder `/(root)`.
+6. Save and wait for GitHub Pages to publish.
 
-## Twitch
+## Important
 
-Der Twitch-Kanal wird in `script.js` konfiguriert:
-
-```js
-const TWITCH_CHANNEL = "crazycaptv";
-```
-
-Der Live-Player und der Chat werden direkt von Twitch eingebettet. Der Statuspunkt im Stream-Bereich bleibt derzeit bewusst im Offline-Zustand, weil keine Twitch-API-Abfrage mit Zugangsdaten im Browser eingerichtet ist.
-
-## Veröffentlichung
-
-Die Website besteht aus statischen Dateien und kann beispielsweise über GitHub Pages veröffentlicht werden. Beim Deployment müssen alle HTML-, CSS-, JavaScript- und Bilddateien im selben veröffentlichten Verzeichnis liegen.
-
-Vor der Veröffentlichung sollten die Angaben im Impressum und in der Datenschutzerklärung auf Vollständigkeit und Aktualität geprüft werden.
+- If you deploy to a new domain or a different GitHub Pages URL, update `TWITCH_PARENT` in `script.js` first. Otherwise Twitch may refuse to load the player or chat.
+- Live status is not tracked automatically by the page. The embedded Twitch player and its own offline screen are the source of truth for whether crAzy cAp is live.
+- The status indicator in the stream card intentionally remains in its current offline state because no Twitch API credentials are exposed in the browser.
+- Before publishing, check the imprint and privacy policy for completeness and current legal requirements.
